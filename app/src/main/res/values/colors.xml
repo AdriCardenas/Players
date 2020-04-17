@@ -5,4 +5,5 @@
     <color name="colorSecondary">#DA0303</color>
     <color name="colorSecondaryDark">#B10101</color>
     <color name="colorSurface">#000000</color>
+    <color name="white">#ffffff</color>
 </resources>

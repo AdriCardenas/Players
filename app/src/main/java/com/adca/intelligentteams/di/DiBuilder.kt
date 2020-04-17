@@ -1,3 +1,3 @@
 package com.adca.intelligentteams.di
 
-val appModules = listOf(useCaseModules)
+val appModules = listOf(useCaseModules, dataModules, presentationModules)

@@ -1,4 +1,4 @@
-package com.adca.intelligentteams.ui.player_list
+package com.adca.intelligentteams.ui.playerList
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -6,7 +6,7 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.adca.intelligentteams.R
-import com.adca.presentation.models.PlayerView
+import com.adca.presentation.model.PlayerView
 
 class PlayerListAdapter : ListAdapter<PlayerView, RecyclerView.ViewHolder>(ListItemCallback()) {
 

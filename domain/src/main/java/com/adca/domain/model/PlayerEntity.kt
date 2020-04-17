@@ -1,4 +1,3 @@
 package com.adca.domain.model
 
-class PlayerEntity {
-}
+data class PlayerEntity(val id: Int, val name: String)
