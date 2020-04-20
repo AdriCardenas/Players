@@ -7,8 +7,8 @@ Android application with Clean Architecture, MVVM, Kotlin, ViewModel and Koin
 
 ### RoadMap
 
-1. Room
-2. Coroutines
+1. ~~Room~~
+2. ~~Coroutines~~
 3. Either
 4. Unit test
 
