@@ -1,4 +1,4 @@
-package com.example.presentation
+package com.adca.presentation
 
 import org.junit.Test
 

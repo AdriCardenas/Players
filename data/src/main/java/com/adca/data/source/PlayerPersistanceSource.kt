@@ -3,6 +3,6 @@ package com.adca.data.source
 import com.adca.domain.model.PlayerEntity
 
 interface PlayerPersistanceSource {
-    fun getPersistedPlayers(): List<PlayerEntity>
-    fun saveNewPlayer(player: PlayerEntity)
+    suspend fun getPersistedPlayers(): List<PlayerEntity>
+    suspend fun saveNewPlayer(player: PlayerEntity)
 }
