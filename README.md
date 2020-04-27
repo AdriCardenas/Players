@@ -8,6 +8,11 @@ You can see two examples in two different branches.
 
 Example MVP contains the same as Example MVVM only presentation layer change. You'll find few differences because I'm using Clean Architecture and I reuse all the data, domain layers.
 
+<br/>
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/27868425/80361819-d7bf0400-8881-11ea-9fbc-21a68c6e751f.png">
+</p>
+<br/>
 
 ### RoadMap
 
