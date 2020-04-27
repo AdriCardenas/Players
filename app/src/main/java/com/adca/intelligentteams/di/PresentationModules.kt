@@ -1,9 +1,9 @@
 package com.adca.intelligentteams.di
 
-import com.adca.presentation.viewmodel.PlayerViewModel
-import org.koin.android.viewmodel.dsl.viewModel
+import com.adca.presentation.contract.PlayerListContract
+import com.adca.presentation.presenter.PlayerListPresenter
 import org.koin.dsl.module
 
 val presentationModules = module {
-    viewModel { PlayerViewModel(get(), get()) }
+    factory<PlayerListContract.Presenter> { (view: PlayerListContract.View) -> PlayerListPresenter(get(), get(), view) }
 }
