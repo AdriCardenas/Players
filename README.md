@@ -3,7 +3,11 @@
 [![API](https://img.shields.io/badge/API-23%2B-blue.svg?style=flat)](https://android-arsenal.com/api?level=23)
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
-Android application with Clean Architecture, MVVM, Kotlin, ViewModel and Koin
+Android application with Clean Architecture, MVVM, Kotlin, ViewModel, Koin, Coroutines and Room.
+You can see two examples in two different branches. 
+
+Example MVP contains the same as Example MVVM only presentation layer change. You'll find few differences because I'm using Clean Architecture and I reuse all the data, domain layers.
+
 
 ### RoadMap
 
