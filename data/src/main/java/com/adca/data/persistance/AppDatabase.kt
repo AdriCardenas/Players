@@ -4,19 +4,21 @@ import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
-import com.adca.data.source.PlayerPersistanceSource
+import com.adca.data.source.PersistanceSource
+import com.adca.domain.model.ListEntity
 import com.adca.domain.model.PlayerEntity
 
-@Database(entities = [PlayerEntity::class], version = 1)
-abstract class PlayerDatabase : RoomDatabase(), PlayerPersistanceSource {
+@Database(entities = [PlayerEntity::class, ListEntity::class], version = 1)
+abstract class AppDatabase : RoomDatabase(), PersistanceSource {
 
     abstract fun playerDao(): PlayerDao
+    abstract fun listDao(): ListDao
 
     companion object {
         @Volatile
-        private var INSTANCE: PlayerDatabase? = null
+        private var INSTANCE: AppDatabase? = null
 
-        fun getInstance(context: Context): PlayerDatabase =
+        fun getInstance(context: Context): AppDatabase =
             INSTANCE ?: synchronized(this) {
                 INSTANCE ?: buildDatabase(context).also { INSTANCE = it }
             }
@@ -24,13 +26,17 @@ abstract class PlayerDatabase : RoomDatabase(), PlayerPersistanceSource {
         private fun buildDatabase(context: Context) =
             Room.databaseBuilder(
                 context.applicationContext,
-                PlayerDatabase::class.java, "PlayerTeams.db"
+                AppDatabase::class.java, "PlayerTeams.db"
             )
                 .build()
     }
 
-    override suspend fun getPersistedPlayers(): List<PlayerEntity> {
-        return playerDao().getAllPlayers()
+    override suspend fun getPlayerFromList(id: String): List<PlayerEntity> {
+        return playerDao().getPlayersByListId(id)
+    }
+
+    override suspend fun saveNewList(list: ListEntity) {
+        listDao().insertList(list)
     }
 
     override suspend fun saveNewPlayer(player: PlayerEntity) {

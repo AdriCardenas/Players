@@ -6,8 +6,8 @@ import com.adca.domain.model.PlayerEntity
 @Dao
 interface PlayerDao {
 
-    @Query("SELECT * FROM Player WHERE id = :id")
-    suspend fun getPlayerById(id: String): PlayerEntity
+    @Query("SELECT * FROM Player WHERE list_id = :id")
+    suspend fun getPlayersByListId(id: String): List<PlayerEntity>
 
     @Query("SELECT * FROM Player")
     suspend fun getAllPlayers(): List<PlayerEntity>
