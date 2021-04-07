@@ -1,6 +1,6 @@
 package com.adca.intelligentteams.di
 
-import com.adca.data.persistance.AppDatabase
+import com.adca.intelligentteams.database.AppDatabase
 import com.adca.data.repository.PlayerRepository
 import com.adca.data.source.PersistanceSource
 import com.adca.domain.contract.PlayerRepositoryContract

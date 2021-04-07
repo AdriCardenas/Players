@@ -1,7 +1,7 @@
 package com.adca.domain.usecaseContract
 
-import com.adca.domain.model.PlayerEntity
+import com.adca.domain.model.Player
 
 interface GetPlayersFromListUseCase {
-    suspend fun invoke(id:String): List<PlayerEntity>
+    suspend fun invoke(id:String): List<Player>
 }

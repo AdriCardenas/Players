@@ -1,17 +1,16 @@
 package com.adca.intelligentteams.ui.base
 
 import android.os.Bundle
-import androidx.annotation.LayoutRes
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 
 abstract class BaseActivity : AppCompatActivity() {
 
-    @LayoutRes
-    abstract fun getLayoutRes(): Int
+    abstract fun getLayoutView(): View
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(getLayoutRes())
+        setContentView(getLayoutView())
     }
 
     fun replaceFragment(id: Int, fragment: BaseFragment) {

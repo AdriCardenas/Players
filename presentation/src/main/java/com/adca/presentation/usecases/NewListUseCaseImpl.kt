@@ -1,11 +1,11 @@
-package com.adca.domain.usecases
+package com.adca.presentation.usecases
 
 import com.adca.domain.contract.ListRepositoryContract
-import com.adca.domain.model.ListEntity
+import com.adca.domain.model.ListPlayers
 import com.adca.domain.usecaseContract.NewListUseCase
 
 class NewListUseCaseImpl(private val repository: ListRepositoryContract) : NewListUseCase {
-    override suspend fun invoke(list: ListEntity) {
+    override suspend fun invoke(list: ListPlayers) {
         repository.saveNewList(list)
     }
 }

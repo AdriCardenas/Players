@@ -1,6 +1,5 @@
 rootProject.name='IntelligentTeams'
 include ':app'
-include ':domain'
 include ':presentation'
 include ':data'
 include ':domain'

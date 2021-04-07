@@ -3,5 +3,5 @@
     <string name="name">Name</string>
     <string name="player_lists">Player lists</string>
     <string name="new_player_list">New player list</string>
-    <string name="write_your_list_name">Write your list_name</string>
+    <string name="write_your_list_name">Write your list of players name</string>
 </resources>

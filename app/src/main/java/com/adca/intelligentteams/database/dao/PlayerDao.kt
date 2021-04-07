@@ -1,7 +1,7 @@
-package com.adca.data.persistance
+package com.adca.intelligentteams.database.dao
 
 import androidx.room.*
-import com.adca.domain.model.PlayerEntity
+import com.adca.intelligentteams.database.model.PlayerEntity
 
 @Dao
 interface PlayerDao {
@@ -22,5 +22,5 @@ interface PlayerDao {
     suspend fun updatePlayer(player: PlayerEntity)
 
     @Query("DELETE FROM Player")
-    fun deleteAllUsers()
+    fun deleteAllPlayers()
 }

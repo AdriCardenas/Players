@@ -1,9 +1,9 @@
 package com.adca.presentation.mapper
 
-import com.adca.domain.model.PlayerEntity
+import com.adca.domain.model.Player
 import com.adca.presentation.model.PlayerView
 
-fun transform(list: List<PlayerEntity>): List<PlayerView> {
+fun transform(list: List<Player>): List<PlayerView> {
     return list.map { playerEntity ->
         transform(
             playerEntity
@@ -11,9 +11,9 @@ fun transform(list: List<PlayerEntity>): List<PlayerView> {
     }
 }
 
-fun transform(playerEntity: PlayerEntity): PlayerView {
+fun transform(player:Player): PlayerView {
     return PlayerView(
-        id = playerEntity.id,
-        name = playerEntity.name
+        id = player.id,
+        name = player.name
     )
 }

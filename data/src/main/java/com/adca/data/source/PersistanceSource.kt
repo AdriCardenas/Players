@@ -1,11 +1,11 @@
 package com.adca.data.source
 
-import com.adca.domain.model.ListEntity
-import com.adca.domain.model.PlayerEntity
+import com.adca.domain.model.ListPlayers
+import com.adca.domain.model.Player
 
 interface PersistanceSource {
-    suspend fun getPlayerFromList(id:String): List<PlayerEntity>
-    suspend fun saveNewPlayer(player: PlayerEntity)
+    suspend fun getPlayerFromList(id:String): List<Player>
+    suspend fun saveNewPlayer(player: Player)
 
-    suspend fun saveNewList(list: ListEntity)
+    suspend fun saveNewList(list: ListPlayers)
 }
