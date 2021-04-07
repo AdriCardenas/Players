@@ -1,20 +1,20 @@
 package com.adca.intelligentteams.di
 
-import com.adca.domain.usecaseContract.GetPlayersContract
-import com.adca.domain.usecaseContract.SavePlayerContract
-import com.adca.domain.usecases.GetPlayers
-import com.adca.domain.usecases.SavePlayer
+import com.adca.domain.usecaseContract.GetPlayersFromListUseCase
+import com.adca.domain.usecaseContract.SavePlayerUseCase
+import com.adca.domain.usecases.GetPlayersFromListUseCaseImpl
+import com.adca.domain.usecases.SavePlayerUseCaseImpl
 import org.koin.dsl.module
 
 val useCaseModules = module {
-    single<GetPlayersContract> {
-        GetPlayers(
+    single<GetPlayersFromListUseCase> {
+        GetPlayersFromListUseCaseImpl(
             repository = get()
         )
     }
 
-    single<SavePlayerContract> {
-        SavePlayer(
+    single<SavePlayerUseCase> {
+        SavePlayerUseCaseImpl(
             repository = get()
         )
     }

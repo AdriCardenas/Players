@@ -14,4 +14,8 @@ abstract class BaseActivity : AppCompatActivity() {
         setContentView(getLayoutRes())
     }
 
+    fun replaceFragment(id: Int, fragment: BaseFragment) {
+        supportFragmentManager.beginTransaction().replace(id, fragment).commit()
+    }
+
 }
